@@ -6,6 +6,9 @@
     <title>Projeto Uninove</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="icon" href="assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
   </head>
   <body>
 
@@ -15,6 +18,16 @@
         <source src="assets/bg-video.mp4" type="video/mp4">
       </video>
     </div>
+
+    <header>
+      <h1>Projeto Uni23/1</h1>
+      <nav>
+        <ul>
+          <li><a href="">Home</a> <span style="left: -124px"></span> </li>
+          <li><a href="">Sign Up</a> <span style="left: -124px"></span> </li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
       <!-- Requisition Waiting Loader -->
@@ -32,7 +45,7 @@
 
       <!-- Login Section -->
       <section class="login">
-        <h1>Welcome</h1>
+        <h2>Welcome</h2>
         <h3>Login</h3>
         <form>
           <div class="input-box">

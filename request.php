@@ -1,12 +1,21 @@
 <?php
-sleep(2);
-if(!empty($_POST["status"]) && !empty($_POST["data"])){
-  if ($_POST["status"] == "validate") {
-    if($_POST["data"]["email"] == "hector" && $_POST["data"]["password"] == "senha"){
-      echo json_encode(true);
-    }else{
-      echo json_encode(false);
+require('db.php'); // Database connection
+sleep(2); // 2 seconds waiting just to see the loading animation
+if(!empty($_POST["status"]) && !empty($_POST["data"])){ // If receiving something
+
+  if ($_POST["status"] == "validate") { // If asking to validate
+    $query = $pdo->prepare('SELECT * FROM Users WHERE Name = :n');
+    $query->bindValue(":n",$_POST["data"]["email"]);
+    $query->execute();
+    $results = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    if(!empty($results)){ // If found any name
+      if ($results[0]["Password"] == $_POST["data"]["password"]) { // If passwords match
+        echo json_encode($results);
+        exit();
+      }
     }
+    echo json_encode(false);
   }
 }
  ?>

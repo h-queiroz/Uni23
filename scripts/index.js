@@ -1,6 +1,9 @@
 let video = Array.from(document.querySelector(".fullscreen-bg").children)[0]; // Background Video
+
+let lis = document.querySelectorAll("li"); // Header Links
+
 let main = document.querySelector("main");
-let waitRequest = document.querySelector(".wait-request");
+let waitRequest = document.querySelector(".wait-request"); // Loading Div that waits for Request Response
 let form = Array.from(document.forms[0].children) // Login Form Inputs Array
 let emailInput = Array.from(form[0].children) // Email Input Box
 let passwordInput = Array.from(form[1].children) // Password Input Box
@@ -46,7 +49,7 @@ function validate(email,password){
     dataType: "JSON",
     data: {status: "validate", data: {"email": email, "password": password}},
     success: (data) => {
-      // alert(data);
+      console.log(data);
       if (data) {
         notification("success");
       }else{
@@ -94,6 +97,37 @@ function notification(status){
   setTimeout(() => {
     div.style.opacity = "0"
     div.style.top = "0";
+    setTimeout(() => {
+      document.body.removeChild(div);
+    },100)
   }, 2000)
 
 }
+
+lis.forEach((li) => {
+  li.addEventListener("mouseover",() => {
+    li.lastElementChild.style.left = "0";
+  })
+
+  li.addEventListener("mouseout",() => {
+    li.lastElementChild.style.left = "124px";
+    setTimeout(() => {
+      li.removeChild(li.lastElementChild);
+      let span = document.createElement('span');
+      span.style.left = "-124px";
+      li.appendChild(span);
+    },400)
+  })
+
+  li.firstElementChild.addEventListener("click",(event) => {
+    event.preventDefault();
+  })
+})
+
+// Making that when click in span that's above the input, focus in the input
+emailInput[1].addEventListener("click",(event) => {
+  emailInput[0].focus();
+})
+passwordInput[1].addEventListener("click",(event) => {
+  passwordInput[0].focus();
+})

@@ -36,6 +36,68 @@ body{
   width: 100%;
 }
 
+header{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  font-size: 1.5em;
+  user-select: none;
+}
+
+header h1{
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1em;
+  margin: 0;
+  color: var(--font-color);
+}
+
+header nav{
+  height: 100%;
+}
+
+header nav ul{
+  padding-left: 0;
+  margin: 0;
+  height: 100%;
+  position: relative;
+}
+
+header nav ul li{
+  display: inline-block;
+  margin-left: 30px;
+  width: 90px;
+  line-height: 50px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+header nav ul li span{
+  width: 120px;
+  border: 2px solid var(--color-white);
+  border-top-width: 1px;
+  position: absolute;
+  /* left: -124px; */
+  bottom: 0;
+  transition: all 0.3s ease-in;
+}
+
+header nav ul li:hover span{
+  /* left: 0; */
+}
+
+header nav ul li a{
+  text-decoration: none;
+  color: var(--font-color);
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+}
+
 main{
   width: 450px;
   height: 550px;
@@ -132,7 +194,7 @@ main .login{
   z-index: 1;
 }
 
-main .login h1{
+main .login h2{
   letter-spacing: 10px;
   font-size: 2.4rem;
   margin-top: 40px;
@@ -215,6 +277,8 @@ main .login form .input-box span{
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
+  user-select: none;
+  cursor: text;
 }
 
 main .login form button{
@@ -228,10 +292,10 @@ main .login form button{
   transition: all 0.2s ease-out;
   background: rgb(0,7,14);
   background: linear-gradient(22deg, rgba(0,7,14,1) 0%, rgba(110,129,184,1) 100%);
+  cursor: pointer;
 }
 
 main .login form button:hover{
-  cursor: pointer;
   transform: scale(1.1);
 }
 
