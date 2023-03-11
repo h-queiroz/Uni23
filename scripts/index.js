@@ -104,6 +104,7 @@ function notification(status){
 
 }
 
+// White line effect under each link in navbar
 lis.forEach((li) => {
   li.addEventListener("mouseover",() => {
     li.lastElementChild.style.left = "0";
