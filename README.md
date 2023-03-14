@@ -44,3 +44,8 @@ Durante o semestre, não teremos entregas parciais, apenas acompanhamento durant
 Na da entrega, deverá ser enviado um arquivo compactado (instruções serão fornecidas mais próximas da data) contendo o arquivo do projeto (PDF) e todas as Atas criadas pelo grupo.
 Aplicação sendo executada de forma online (web ou local).
 Além disso, deverá ser criado um vídeo de apresentação (apenas narração - pode ser apenas uma pessoa) com no máximo de 5 minutos apresentando o projeto e relacionando o nome e RA dos participantes como créditos.
+
+
+### Nosso Objetivo
+
+A principal funcionalidade deste projeto é fazer com que tenhamos um uma plataforma que englobe os projetos individuais de cada membro do grupo e que no final tenhamos pelo menos um de cada um dos projetos opcionais que nos foi oferecido.
