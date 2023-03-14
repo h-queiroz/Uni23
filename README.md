@@ -31,10 +31,10 @@ A ferramenta Trello é um recurso muito útil para o acompanhamento e desenvolvi
 O QUE SERÁ DESENVOLVIDO?
 O objetivo deste projeto é desenvolver completamente um sistema interativo que pode ser:
 
-Um Jogo (jogável)
-Um CRUD (completo - programação web)
-Um App (com consumo de API, por exemplo)
-Um programa que faça algum interação com imagens/vídeos (processamento de imagens)
+* Um Jogo (jogável)
+* Um CRUD (completo - programação web)
+* Um App (com consumo de API, por exemplo)
+* Um programa que faça algum interação com imagens/vídeos (processamento de imagens)
 etc.
 
 ### Entrega
