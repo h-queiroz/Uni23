@@ -1,3 +1,14 @@
+<?php
+  session_start();
+  if (!isset($_SESSION["logged"]) || !$_SESSION["logged"]) {
+    $_SESSION["triedToAccess"] = true;
+    header('Location: index');
+  }
+  // echo "<pre>";
+  // print_r($_SESSION);
+  // echo "</pre>";
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -16,16 +27,20 @@
       <h1>Projeto Uni23/1</h1>
       <nav>
         <ul>
-          <li><a href="">Home</a> <span style="left: -124px"></span> </li>
-          <li><a href="">Sign Up</a> <span style="left: -124px"></span> </li>
+          <li><a href="home">Home</a> <span style="left: -124px"></span> </li>
+          <li><a href="index">Sign Up</a> <span style="left: -124px"></span> </li>
+          <li><a href="#">Log out</a> <span style="left: -149px"></span> </li>
         </ul>
       </nav>
     </header>
 
     <main class="container">
       <div class="welcome-message">
-        <h3>Welcome <i>Name</i></h3>
+        <h3>Welcome <i><?php echo $_SESSION["data"]["Name"] ?></i></h3>
         <p>Below is a list of your team's projects</p>
+      </div>
+      <div class="projects-box">
+        <div class="project add-project">+</div>
       </div>
     </main>
 
@@ -33,6 +48,7 @@
       <h5>@ 2023, h-queiroz Productions. All Rights Reserved</h5>
     </footer>
 
+    <script type="text/javascript" src="scripts/jquery.js"></script> <!-- Jquery for Ajax Requistion -->
     <script type="text/javascript" src="scripts/home.js"></script>
   </body>
 </html>

@@ -1,0 +1,61 @@
+*{
+  box-sizing: border-box;
+  font-family: sans-serif;
+  user-select: none;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+
+body *{
+  position: relative;
+  top: -40px;
+}
+
+h1{
+  background-image: url("../assets/space.jpg");
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: "Tilt Warp";
+  font-size: 200px;
+  margin: 0;
+}
+
+h3, a{
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h3{
+  font-size: 2em;
+}
+
+p{
+  width: 450px;
+  text-align: center;
+  font-weight: bold;
+}
+
+a{
+  display: block;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: #0045d4;
+  text-decoration: none;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.3s ease-out;
+}
+
+a:hover{
+  transform: scale(1.1);
+}

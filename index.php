@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  if (isset($_SESSION["logged"]) && $_SESSION["logged"]) {
+    header('Location: home');
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -23,8 +31,8 @@
       <h1>Projeto Uni23/1</h1>
       <nav>
         <ul>
-          <li><a href="">Home</a> <span style="left: -124px"></span> </li>
-          <li><a href="">Sign Up</a> <span style="left: -124px"></span> </li>
+          <li><a href="home">Home</a> <span style="left: -124px"></span> </li>
+          <li><a href="index">Sign Up</a> <span style="left: -124px"></span> </li>
         </ul>
       </nav>
     </header>
@@ -63,5 +71,14 @@
 
     <script type="text/javascript" src="scripts/jquery.js"></script> <!-- Jquery for Ajax Requistion -->
     <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript">
+    console.log(typeof notification == "function");
+    <?php if(isset($_SESSION["triedToAccess"]) && $_SESSION["triedToAccess"] == true){?>
+      notification("triedToAccess");
+      <?php
+      $_SESSION["triedToAccess"] = false;
+    }
+    ?>
+    </script>
   </body>
 </html>

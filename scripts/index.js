@@ -52,6 +52,9 @@ function validate(email,password){
       console.log(data);
       if (data) {
         notification("success");
+        setTimeout(() => {
+          window.location.href = "home";
+        },1500)
       }else{
         notification("error");
       }
@@ -86,6 +89,10 @@ function notification(status){
     h5.textContent = "Fail";
     p.textContent = "Not in database";
     div.classList.add("error");
+  }else if (status == "triedToAccess") {
+    h5.textContent = "Data Breach";
+    p.textContent = "Please login in first";
+    div.classList.add("triedToAccess");
   }
 
   document.body.appendChild(div);
@@ -118,10 +125,6 @@ lis.forEach((li) => {
       span.style.left = "-124px";
       li.appendChild(span);
     },400)
-  })
-
-  li.firstElementChild.addEventListener("click",(event) => {
-    event.preventDefault();
   })
 })
 

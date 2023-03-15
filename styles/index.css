@@ -5,6 +5,8 @@
   --color-dark-grey: #2D3142;
   --color-light-green: #ADF7B6;
   --color-dark-green: #3BDA1B;
+  --color-dark-yellow: #e1e50b;
+  --color-light-yellow: #fbff32;
   --color-light-red: #E84855;
   --color-dark-red: #F8333C;
 
@@ -23,6 +25,12 @@ body{
   padding: 0;
   border: 0;
   overflow: hidden;
+}
+
+.teste-div{
+  background-color: red;
+  width: 100px;
+  height: 100px;
 }
 
 .fullscreen-bg{
@@ -319,6 +327,10 @@ main .login form button:hover{
   background-color: var(--color-light-red);
 }
 
+.notification.triedToAccess{
+  background-color: var(--color-light-yellow);
+}
+
 .notification h5{
   font-family: monospace;
   font-size: 1.5em;
@@ -333,6 +345,10 @@ main .login form button:hover{
 
 .notification.error h5{
   background-color: var(--color-dark-red);
+}
+
+.notification.triedToAccess h5{
+  background-color: var(--color-dark-yellow);
 }
 
 .notification p{
